@@ -16,6 +16,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Hero Section */}
+      {
       <section className="py-20 px-4 max-w-5xl mx-auto text-center">
         <h1 className="text-5xl md:text-6xl font-light text-slate-800 mb-8 leading-tight">
           Career Support for Software Professionals
@@ -38,16 +39,10 @@ const Index = () => {
             Get Started Today
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
-          <Button 
-            asChild
-            variant="outline"
-            className="border-2 border-slate-300 text-slate-700 hover:bg-slate-100 px-10 py-4 rounded-lg text-lg font-medium transition-all hover:shadow-md"
-          >
-            <a href="/pricing">View Service Packages</a>
-          </Button>
         </div>
+        
 
-        {/* Trust Indicators */}
+        {/* Trust Indicators */ }
         <div className="mt-16 grid md:grid-cols-3 gap-8 text-center">
           <div className="flex flex-col items-center">
             <div className="bg-green-100 rounded-full p-4 mb-4">
@@ -72,6 +67,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+        }
 
       {/* How I Work */}
       <section className="py-20 px-4 bg-white">
@@ -107,103 +103,6 @@ const Index = () => {
 
       {/* Testimonials */}
       <TestimonialsSection />
-
-      {/* Service Packages Preview */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-light text-slate-800 mb-4 text-center">Two Simple Packages</h2>
-          <p className="text-xl text-slate-600 mb-16 text-center max-w-2xl mx-auto">
-            Choose the package that fits your needs.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Essential Package */}
-            <Card className="border-2 border-slate-200 hover:border-slate-300 transition-all hover:shadow-lg">
-              <CardContent className="p-8">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-semibold text-slate-800 mb-2">Essential</h3>
-                  <div className="text-4xl font-bold text-slate-800 mb-2">₹499</div>
-                  <p className="text-slate-600">Perfect for job applications</p>
-                </div>
-                
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-slate-700">Resume refinement for all levels & roles</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-slate-700">LinkedIn profile clarity & keywords</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-slate-700">GitHub/project portfolio review</span>
-                  </div>
-                </div>
-                
-                <Button 
-                  onClick={scrollToContact}
-                  className="w-full bg-slate-700 hover:bg-slate-800 text-white py-3"
-                >
-                  Get Essential Package
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Complete Package */}
-            <Card className="border-2 border-blue-200 hover:border-blue-300 transition-all hover:shadow-lg relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                  Most Popular
-                </span>
-              </div>
-              <CardContent className="p-8">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-semibold text-slate-800 mb-2">Complete</h3>
-                  <div className="text-4xl font-bold text-slate-800 mb-2">₹999</div>
-                  <p className="text-slate-600">Everything + interview prep</p>
-                </div>
-                
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-slate-700">Everything in Essential package</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-slate-700">Mock interviews (technical & behavioral)</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-slate-700">Project storytelling for career switchers</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-slate-700">Personal portfolio website building</span>
-                  </div>
-                </div>
-                
-                <Button 
-                  onClick={scrollToContact}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3"
-                >
-                  Get Complete Package
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center mt-12">
-            <Button 
-              asChild
-              variant="outline"
-              className="border-slate-300 text-slate-700 hover:bg-slate-100 px-8 py-3"
-            >
-              <a href="/pricing">View Detailed Pricing →</a>
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Who I've Helped */}
       <WhoIHelp />
