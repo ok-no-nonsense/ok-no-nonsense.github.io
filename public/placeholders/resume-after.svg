@@ -1,0 +1,20 @@
+<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; border: 1px solid #007ACC; padding: 25px; max-width: 600px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <div style="display: flex; align-items: center; border-bottom: 3px solid #007ACC; padding-bottom: 15px;">
+    <div>
+      <h1 style="margin: 0; font-size: 2.5em; color: #333;">Jane Doe</h1>
+      <p style="margin: 5px 0 0; font-size: 1.2em; color: #555;"><strong>Senior Software Engineer</strong> | Cloud & DevOps Specialist</p>
+    </div>
+  </div>
+  <p style="margin-top: 20px; font-size: 1.1em; line-height: 1.6;">Results-driven Software Engineer with 5+ years of experience in designing, developing, and deploying scalable applications. Proven ability to lead projects and mentor junior developers.</p>
+  
+  <h3 style="border-bottom: 2px solid #007ACC; padding-bottom: 8px; margin-top: 25px; font-size: 1.4em; color: #333;">Professional Experience</h3>
+  <p style="margin-top: 15px;"><strong>Innovatech Solutions</strong> - Senior Software Developer<br>
+  <em style="color: #777;">2020 - Present</em><br>
+  - Led the development of a microservices-based architecture, improving system scalability by 40%.<br>
+  - Implemented CI/CD pipelines, reducing deployment time by 75%.</p>
+  
+  <h3 style="border-bottom: 2px solid #007ACC; padding-bottom: 8px; margin-top: 25px; font-size: 1.4em; color: #333;">Core Competencies</h3>
+  <p style="margin-top: 15px; line-height: 1.8;"><strong>Languages:</strong> Java, Python, Go<br>
+  <strong>Cloud:</strong> AWS, Azure<br>
+  <strong>DevOps:</strong> Docker, Kubernetes, Terraform</p>
+</div>

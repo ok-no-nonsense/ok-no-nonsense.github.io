@@ -1,0 +1,14 @@
+<div style="font-family: Arial, sans-serif; border: 1px solid #ccc; padding: 20px; max-width: 600px; background-color: #f9f9f9;">
+  <h2 style="border-bottom: 2px solid #ccc; padding-bottom: 10px;">Jane Doe</h2>
+  <p><strong>Software Engineer</strong></p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+  
+  <h3 style="border-bottom: 1px solid #eee; padding-bottom: 5px; margin-top: 20px;">Experience</h3>
+  <p><strong>Generic Company</strong> - Software Developer<br>
+  <em>2020 - Present</em><br>
+  - Wrote code.<br>
+  - Fixed bugs.</p>
+  
+  <h3 style="border-bottom: 1px solid #eee; padding-bottom: 5px; margin-top: 20px;">Skills</h3>
+  <p>Java, Python, SQL</p>
+</div>

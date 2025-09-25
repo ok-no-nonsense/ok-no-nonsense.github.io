@@ -1,8 +1,14 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { useState } from "react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export const CompaniesSection = () => {
+  const [containerRef, isVisible] = useIntersectionObserver({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  });
+
   const companies = [
     { name: "Apple", logo: "/logos/apple.png", brandColor: "#000000" },
     { name: "Deloitte", logo: "/logos/deloitte.png", brandColor: "#86BC25" },
@@ -24,53 +30,38 @@ export const CompaniesSection = () => {
     { name: "RTS", logo: "/logos/rts.jpg", brandColor: "#E30613" },
     { name: "M&G", logo: "/logos/m&g.jpg", brandColor: "#005EB8" },
     { name: "LTI Mindtree", logo: "/logos/lti.jpg", brandColor: "#00205B" },
-    { name: "Datamatic", logo: "/logos/datamatics.jpg", brandColor: "#e30022" },
-    { name: "Publicis Sapient", logo: "/logos/publicissapient.jpg", brandColor: "#9B0101" }
+    { name: "Datamatic", logo: "/logos/datamatics.png", brandColor: "#e30022" },
+    { name: "Publicis Sapient", logo: "/logos/publicissapient.jpg", brandColor: "#9B0101" },
+    { name: "GitHub", logo: "/logos/github.svg", brandColor: "#181717" },
+    { name: "Stack Overflow", logo: "/logos/stackoverflow.svg", brandColor: "#F58025" }
   ];
 
   return (
-    <section className="py-16 px-4 bg-slate-50">
+    <section ref={containerRef} className={`py-16 px-4 bg-background fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-light text-slate-800 mb-4 text-center">Where People I've Helped Got Interviews</h2>
-        <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+        <h2 className="text-3xl font-light text-foreground mb-4 text-center">Trusted By Professionals at Top Companies & Platforms</h2>
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Quiet success stories — people landing interviews at top companies after working together on their applications.
         </p>
         
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          {companies.map((company, index) => {
-            const [imgError, setImgError] = useState(false);
-            return (
-              <Card key={index} className="border-slate-200 hover:shadow-md transition-shadow group">
-                <CardContent className="p-4 flex flex-col items-center justify-center h-24">
-                  {!imgError ? (
-                    <>
-                      <img
-                        src={company.logo}
-                        alt={`${company.name} logo`}
-                        className="max-h-8 max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                        onError={() => setImgError(true)}
-                      />
-                      <span
-                        className="text-xs font-medium text-slate-600 text-center mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300"
-                        style={{ color: company.brandColor }}
-                      >
-                        {company.name}
-                      </span>
-                    </>
-                  ) : (
-                    <span className="text-xs font-medium text-slate-600 text-center">
-                      {company.name}
-                    </span>
-                  )}
-                </CardContent>
-              </Card>
-            );
-          })}
+          {companies.map((company, index) => (
+            <Card key={index} className="bg-card border group card-hover-effect">
+              <CardContent className="p-4 flex flex-col items-center justify-center h-24 relative">
+                <img
+                  src={company.logo}
+                  alt={`${company.name} logo`}
+                  className={`max-h-10 max-w-full object-contain transition-all duration-300 ${['Apple', 'Dentsu', 'GitHub', 'Stack Overflow', 'Deloitte', 'Accenture'].includes(company.name) ? 'dark:invert' : ''}`}
+                />
+                <p className="text-xs text-center mt-2 text-foreground absolute bottom-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{company.name}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
         
         <div className="mt-8 text-center">
-          <p className="text-sm text-slate-500">
-            Numbers next to company names represent multiple successful placements
+          <p className="text-sm text-muted-foreground">
+            And many more...
           </p>
         </div>
       </div>
